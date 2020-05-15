@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Exo', sans-serif;
+		}
+		.bgimg{
+		    background-image: url("1.jpg");
+			height: 97vw;
+			width: 100%;
+			color: white;
+		}
+
+		.menu{
+			background-color: rgba(0,0,0,0.4);
+			width: 100%;
+			height: 120px;
+		}
+
+		.lmenu{
+			width : 35%;
+			color: white;
+			float: left;
+		}
+
+		.lmenu h4{
+			margin: 0;
+			padding-left:40px;
+			position: absolute;
+			line-height: 120px;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-family: 'Baloo Bhai 2', cursive;
+			font-size: 35px;
+			text-shadow: 1px 2px 20px cyan;
+			
+		}
+		video{
+			object-fit: cover;
+			position: absolute;
+		}
+		.lmenu h4 span{
+			display: inline-block;
+			opacity: 0;
+			animation: logo 2s 1 forwards; 
+		}
+		@keyframes logo{
+			0%{
+		       opacity: 0;
+		       transform: rotateY(90deg);
+		       transform: rotate3d(180deg);
+		       filter: blur(10px);
+			}
+			100%{
+			     opacity: 1;
+			     transform: rotateY(0);
+				
+			}
+
+		}
+		 
+		.lmenu h4 span:nth-child(1)
+		{
+			animation-delay: 0.5s;
+		} 
+		.lmenu h4 span:nth-child(2)
+		{
+			animation-delay: 1.25s;
+		} 
+		.lmenu h4 span:nth-child(3)
+		{
+			animation-delay: 1.5s;
+		} 
+		.lmenu h4 span:nth-child(4)
+		{
+			animation-delay: 2s;
+		} 
+		.lmenu h4 span:nth-child(5)
+		{
+			animation-delay: 2.5s;
+		} 
+		.lmenu h4 span:nth-child(6)
+		{
+			animation-delay: 2.75s;
+		} 
+		.lmenu h4 span:nth-child(7)
+		{
+			animation-delay: 3s;
+		} 
+		.lmenu h4 span:nth-child(9)
+		{
+			animation-delay: 3.25s;
+		} 
+		.lmenu h4 span:nth-child(10)
+		{
+			animation-delay: 3.5s;
+		} 
+		.lmenu h4 span:nth-child(11)
+		{
+			animation-delay: 3.75s;
+		}
+		.lmenu h4 span:nth-child(12)
+		{
+			animation-delay: 4s;
+		} 
+		.lmenu h4 span:nth-child(13)
+		{
+			animation-delay: 4.25s;
+		} 
+		.lmenu h4 span:nth-child(14)
+		{
+			animation-delay: 4.5s;
+		}  
+		.lmenu h4 span:nth-child(15)
+		{
+			animation-delay: 4.75s;
+		} 
+
+		.rmenu{
+			width: 60%;
+			float: right;
+			
+		}
+		.rmenu ul{
+			margin-left: 200px;
+		}
+
+		.rmenu ul li{
+			display: inline-block;
+			color: white;
+			font-weight: bold;
+		    margin-left: 60px;
+		    line-height: 120px;
+		    text-transform: uppercase;
+		    font-family: 'Baloo Bhai 2', cursive;
+		}
+
+		.rmenu ul li:hover{
+			color: orange;
+		}
+		#act
+		{
+			color: orange;
+		}
+
+
+		body{
+			background: #060c21;
+			min-height: 1500px;
+		}
+		section{
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			overflow: hidden;
+			align-items: center;
+			justify-content: center;
+		}
+		section:before{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			height: 100px;
+			width: 100%;
+			background: linear-gradient(to top,#0a2a43,transparent);
+			z-index: 10000;
+		}
+		section:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: #0a2a43;
+			z-index: 10000;
+			mix-blend-mode: color;
+		}
+		section img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			pointer-events: none;
+		}
+		#text{
+			position: relative;
+			color: #fff;
+			left: -100px;
+			text-shadow: 10px 10px 20px #000;
+			font-size: 10em;
+			z-index: 1;
+
+		}
+		#road{
+			z-index: 2;
+		}
+		.container{
+			position: relative;
+			width: 90%;
+			display: grid;
+			grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+			grid-template-rows: auto;
+			grid-gap: 0 40px;
+		}
+		.container .box{
+			position: relative;
+			top: 100px;
+			left: 100px;
+			display: flex;
+			height: 400px;
+			align-items: center;
+			justify-content: center;
+			background: #060c21;
+			border: 1px solid #000;
+		}
+		.container .box:nth-child(2){
+			position: relative;
+			top: 100px;
+			left: 120px;
+			display: flex;
+			height: 400px;
+			width: 60vw;
+			align-items: center;
+			justify-content: center;
+			background: #060c21;
+			border: 1px solid #000;
+		}
+		.container .box:before{
+			content: '';
+			position: absolute;
+			left: -2px;
+			top: -2px;
+			right: -2px;
+			bottom: -2px;
+			background: #fff;
+			transform: skew(2deg,2deg);
+			z-index: -1;
+		}
+		.container .box:nth-child(1):before
+		{
+			background: linear-gradient(315deg,#ff0057,#e64a19);
+			
+		}
+		.container .box:nth-child(2):before
+		{
+			transform: skew(1deg,1deg);
+			background: linear-gradient(315deg,#89ff00,#00bcd4);
+		}
+		.container .box:after{
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 100%;
+			background: rgba(255,255,255,0.05);
+			pointer-events: none;
+			
+		}
+		.box .content{
+			position: relative;
+			padding: 20px;
+		}
+		.content img{
+			height: 300px;
+			box-shadow: border-box;
+			border: 5px solid black;
+		}
+	
+		.box .content p{
+			position: relative;
+			width: 80%;
+			font-size: 22px;
+			left: 4px;
+			margin: 20px 0 0;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			border: 1px solid #fff;
+			display: inline-block;
+			color: #fff;
+			font-family: cursive;
+			transition: 0.5s;
+			transform: translateY(-40px);
+			opacity: 0;
+			visibility: hidden;
+		}
+		.box .content #details{
+			opacity: 1;
+			text-align: justify;
+			visibility: visible;
+			width: 90%;
+			height: 300px;
+			transform: translateY(-10px);
+		}
+		.box:hover .content p {
+			transform: translateY(-10px);
+			opacity: 1;
+			visibility: visible;
+		}
+		.box .content p:hover{
+			color: #000;
+			background: #fff;
+		}
+		.footer{
+			position: absolute;
+			height: 20vh;
+			width: 100%;
+			font-size: 36px;
+			height: 20vw;
+			top: 210%;
+			margin: 20px 0 0;
+			padding: 10px 20px;
+			text-align: center;
+			color: #fff;
+			font-family: cursive;
+		}
+		h1 {
+		  text-align: center;
+		}
+		.social-menu ul {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    padding: 0;
+		    margin: 0;
+		    display: flex;
+		}
+		.social-menu ul li {
+		    list-style: none;
+		    margin: 0 10px;
+		}
+		.social-menu ul li .fa {
+		    color: #000000;
+		    font-size: 25px;
+		    line-height: 50px;
+		    transition: .5s;
+		}
+		.social-menu ul li .fa:hover {
+		    color: #ffffff;
+		}
+		.social-menu ul li a {
+		    position: relative;
+		    display: block;
+		    width: 50px;
+		    height: 50px;
+		    border-radius: 50%;
+		    background-color: white;
+		    text-align: center;
+		    transition: 0.5s;
+		    transform: translate(0,0px);
+		    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+		    text-decoration: none;
+		}
+		.social-menu ul li a:hover {
+		    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+		}
+		.social-menu ul li:nth-child(1) a:hover {
+		    background-color: #3b5999;
+		}
+		.social-menu ul li:nth-child(2) a:hover {
+		    background-color: #FF0066;
+		}
+		.footer h2{
+			text-decoration: none;
+			font-size: 24px;
+			padding: 10px;
+			color: #CC3399;
+			visibility:hidden;
+			opacity: 0;
+		}
+		.social-menu ul li:nth-child(3) a:hover{
+		    background-color: #29B6F6;
+		 }
+		.social-menu ul li a:hover h2{
+		    visibility: visible;
+			opacity: 1;
+		}
+		.social-menu ul li:nth-child(4) a:hover {
+		    background-color: #00FF00;
+		}
+		.social-menu ul li:nth-child(5) a:hover {
+		    background-color: #F44336;
+		}
+		
+	
+	</style>
+</head>
+<body>
+	<div class="menu">
+			<div class="lmenu">
+				<video src="smoke.mp4" autoplay muted height="120px" width="35%" ></video>
+				<h4>
+					<span>c</span>
+					<span>o</span>
+					<span>l</span>
+					<span>l</span>
+					<span>e</span>
+					<span>g</span>
+					<span>e</span>
+					<span></span>
+					<span>a</span>
+					<span>a</span>
+					<span>r</span>
+					<span>a</span>
+					<span>m</span>
+					<span>b</span>
+					<span>h</span>
+				</h4>
+			</div>
+
+			<div class="rmenu">
+			<ul>
+				<li>HOME</li>
+				<li>COLLEGES</li>
+				<li>cut off</li>
+				<li id="act">ABOUT US</li>
+			</ul>
+		    </div>
+		</div>
+	<section>
+		<img src="bgm.jpg" id="bg">
+		<img src="moon.png" id="moon">
+		<img src="mountain.png" id="mountain">
+		<img src="road.png" id="road">
+		<h2 id="text">ABOUT US</h2>
+	</section>
+	<script type="text/javascript">
+		let bg = document.getElementById("bg");
+		let moon = document.getElementById("moon");
+		let mountain = document.getElementById("mountain");
+		let road = document.getElementById("road");
+		let text = document.getElementById("text");
+		window.addEventListener('scroll',function(){
+			var value = window.scrollY;
+			bg.style.top = -value * 0.5 + 'px';
+			moon.style.left = -value * 0.5 + 'px';
+			mountain.style.top = -value * 0.15 + 'px';
+			road.style.top = value * 0.15 + 'px';
+			text.style.top = value * 1 + 'px';
+		})
+	</script>
+	<div class="container">
+		<div class="box">
+			<div class="content">
+				<img src="me.png">
+				<p>Ankesh Singh</p	>
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<p id="details">
+					My name is Ankesh Singh. I'm 19years old. I born in Etah, Uttar Pradesh. Currently, I am living in Kurukshetra(Haryana), India.<br><br>
+					I am doing my B.Tech degree from National Institute Of Technology Kurukshetra.My branch is Information Technology which comes under Computer Engineering Department. As I love to do coding that's the reason why I choosed IT branch.<br> <br>
+					I love to play volleyball. I also like to go out and have fun with my Friends.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="social-menu">
+		  <h1>You can contact me through:-</h1>
+		  <ul>
+		    <li><a href="https://www.facebook.com/profile.php?id=100025191012423"><i class="fa fa-facebook"></i></a></li>
+		    <li><a href="https://www.instagram.com/vicky_ankesh/"><i class="fa fa-instagram"></i></a></li>
+		    <li><a href="#" id="hvr"><i class="fa fa-phone"></i><h2>+91-9571736707</h2></a></li>
+		    <li><a href="#" id="hvr"><i class="fa fa-whatsapp"></i><h2>+91-9571736707</h2></a></li>
+		    <li><a href="#" id="hvr"><i class="fa fa-google-plus"></i><h2>singhankesh9@gmail.com</h2></a></li>
+		  </ul>
+		</div>
+	</div>
+</body>
+</html>
